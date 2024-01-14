@@ -1,0 +1,50 @@
+kali linux / tryhackme.com
+***************************************************************************
+Linux kodları:
+
+echo ...		==> yazdırma, echo dan gelen sonraki kelimeleri yazdırıyor
+whoami			==> hangi kullanıcı olduğunu gösterir
+ls 			==> listeleme. Mevcut klasördeki dosyaları listeleme
+cd ...			==> klasörler arasında gezinme. cd den sonra yazılan klasöre gider. geri dönmek için sadece cd yazmak yeterli
+cat ...			==> dosyanın içerğini görüntüler. cat note.txt dersek mesala note.txt nin içeriğini ekrana verir
+pwd			==> klasörün konumunu yani .../.../.../... gibi dizini gösterir.
+find -name ...		==> ... isimli dosyanın klasörünü bul
+grep "..." folder	==> folder içinde THM geçen kısmı bul
+clear			==> sayfayı temizler
+">"			==> yeni dosya oluşturmak için kullanılıyor. 
+echo selam>hosgeldin yazdığında hosgeldin isimli bir dosya oluşuyor ve içeriğini göstermek için cat hosgeldin yazarsak selam içeriğini veriyor
+">>"			==> eklem yapmak için kullanılıyor
+echo nasilsin>>hosgeldin yazarsak hosgeldin'in içine nasilsini da ekliyor. Yani cat hosgeldin yazarsak selam ve nasilsin yazar
+ssh whoami@ip		==> şifreli olarak belirtilen ip adresine uzaktan bağlanma. "ssh tryhackme@10.10.84.168" gibi
+touch ...		==> dosya oluşturma
+mkdir ...		==> klasör oluşturma
+rm ...			==> dosya silme
+file ...		==> dosya tipini gösterme
+mv ..1 ..2		==> mov komutu, ..1'i ..2 klasörüne taşı
+cp ...			==> copy
+ls -a			==> gizli olan tüm dosyaları listeleme (--all un kısaltılmışı)"." ile başlayanlar gizli klasörler
+ls --help		==> yardım
+man ls			==> manuel sayfası
+ls -l			==> (--login kısaltılması) kullanıcıları görüntüleme
+su ...			==> switch user yani kullanıcı değiştir. 
+sudo su			==> root a geç
+
+*************************************************************************************
+nmap kodları:
+
+nmap 192.168.1.4 	==> 192.168.1.4 ü tara
+nmap 192.168.1.1-100	==> 1-100 arasını tarama
+nmap 192.168.1.0/24	==> 255 portun tamamını tara
+nmap alicom		==> ip sini bilmediğin internet adresi
+nmap -sS -F 192.168.1.4	==> bütün portları hızlı tara 
+-sS			==> Syn taraması / yarı açık tarama
+-F			==> hızlı
+-p80			==> sadece 80. portu tara. 80 yerine yazılan portu tarar
+-o			==> işletim sistemini gösterme
+-sN			==> port taraması
+-n			==> DNS çözümleme
+-v -vv -vvv		==> ayrıntılı arama v sayısı arttıkça arama ayrıntısı artıyor
+--open			==> açık portları gösterme
+-p-			==> bir IP üzarinteki tüm portları (65535) tarama
+
+
